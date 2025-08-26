@@ -2,6 +2,7 @@ import type React from 'react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import StructuredData from '@/components/structured-data'
 
 const inter = Inter({
 	subsets: ['latin'],
@@ -13,30 +14,39 @@ export const metadata: Metadata = {
 	metadataBase: new URL('https://auroofing.net.au'),
 	title: {
 		default:
-			'Au Roofing - Professional Roofing Services | Expert Roof Repair & Installation',
-		template: '%s | Au Roofing - Professional Roofing Services',
+			'Roof Leak Repair Sydney | Emergency Leaking Roof Specialists | AU Roofing',
+		template: '%s | AU Roofing - Roof Leak Repair Sydney',
 	},
 	description:
-		'Expert roofing services with 20+ years of experience. Quality roof repair, installation, and maintenance. Licensed, insured, and trusted by homeowners. Free estimates available.',
+		'Professional roof leak repair Sydney specialists. 24/7 emergency leaking roof repair services across Eastern Suburbs, Western Sydney, North Sydney & Inner West. Licensed roof leak detection experts with 20+ years experience. Fast response, affordable rates.',
 	keywords: [
-		'roofing services',
-		'roof repair',
-		'roof installation',
-		'roofing contractor',
-		'roof maintenance',
+		'roof leak repair Sydney',
+		'leaking roof repair Sydney',
+		'emergency roof leak repair Sydney',
+		'roof leak detection Sydney',
+		'leaking roof Sydney',
+		'roof leak specialists Sydney',
+		'roof leak repair Eastern Suburbs Sydney',
+		'leaking roof repair Western Sydney',
+		'emergency roof leak repair North Sydney',
+		'roof repairs Inner West Sydney',
+		'roof leak detection Hills District Sydney',
+		'leaking roof Northern Beaches Sydney',
+		'ceiling leak repair Sydney',
+		'gutter leak repair Sydney',
+		'storm damage roof repair Sydney',
+		'waterproofing roof Sydney',
+		'24/7 emergency roof repairs Sydney',
+		'best roof leak repair company Sydney',
+		'affordable roof leak repair Sydney',
+		'licensed roof leak repair contractors Sydney',
+		'24 hour roof leak repair Sydney',
+		'roof repair Sydney',
+		'roofing contractor Sydney',
 		'emergency roof repair',
-		'residential roofing',
-		'commercial roofing',
-		'roof inspection',
-		'roof replacement',
-		'professional roofer',
-		'licensed roofing',
-		'insured roofing contractor',
-		'quality roofing',
-		'roofing experts',
-		'storm damage repair',
-		'leak repair',
-		'gutter services',
+		'roof maintenance Sydney',
+		'roof inspection Sydney',
+		'professional roofer Sydney',
 	],
 	authors: [{ name: 'Au Roofing Team' }],
 	creator: 'Au Roofing',
@@ -58,11 +68,11 @@ export const metadata: Metadata = {
 		type: 'website',
 		locale: 'en_AU',
 		url: 'https://auroofing.net.au',
-		siteName: 'Au Roofing - Professional Roofing Services',
+		siteName: 'AU Roofing - Roof Leak Repair Sydney Specialists',
 		title:
-			'Au Roofing - Professional Roofing Services | Expert Roof Repair & Installation',
+			'Emergency Roof Leak Repair Sydney | 24/7 Leaking Roof Specialists | AU Roofing',
 		description:
-			'Expert roofing services with 10+ years of experience. Quality roof repair, installation, and maintenance. Licensed, insured, and trusted by homeowners.',
+			'Professional roof leak repair Sydney specialists. Emergency leaking roof repair services across all Sydney suburbs. Licensed roof leak detection experts. Fast response, affordable rates. Call now!',
 		images: [
 			{
 				url: '/beautiful-orange-roof.png',
@@ -244,7 +254,10 @@ export default function RootLayout({
           }
         `}</style>
 			</head>
-			<body className='font-body antialiased'>{children}</body>
+			<body className='font-body antialiased'>
+				<StructuredData />
+				{children}
+			</body>
 		</html>
 	)
 }

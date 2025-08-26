@@ -7,17 +7,29 @@ Sitemap: https://auroofing.net.au/sitemap.xml
 # Crawl-delay for polite crawling
 Crawl-delay: 1
 
-# Disallow private areas (if any)
+# Disallow private areas
 Disallow: /admin/
 Disallow: /private/
 Disallow: /_next/
-Disallow: /api/
 
-# Allow important pages
+# Allow API for contact form
+Allow: /api/contact
+
+# Allow important sections
+Allow: /#services
+Allow: /#contact
+Allow: /#about-us
+Allow: /#gallery
+Allow: /#emergency-roof-leak-repair-sydney
+Allow: /#roof-leak-detection-sydney
+
+# Google-specific directives
+User-agent: Googlebot
 Allow: /
-Allow: /services/
-Allow: /contact/
-Allow: /about/
+
+# Bing-specific directives
+User-agent: Bingbot
+Allow: /
 
 # Host
 Host: https://auroofing.net.au

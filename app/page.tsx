@@ -26,6 +26,8 @@ import {
 import Image from 'next/image'
 import { domAnimation, LazyMotion, m } from 'motion/react'
 import { useState, useEffect } from 'react'
+import { useForm } from 'react-hook-form'
+import { toast } from '@/hooks/use-toast'
 import BeforeAfterSlider from '@/components/before-after-slider'
 import { Counter } from '@/components/counter'
 
@@ -267,17 +269,20 @@ export default function HomePage() {
 										variants={fadeInLeft}
 										itemProp='name'
 									>
-										Quality Roofing
-										<span className='text-primary block'>Solutions</span>
+										Emergency Roof Leak Repair
+										<span className='text-primary block'>
+											Sydney Specialists
+										</span>
 									</m.h1>
 									<m.p
 										className='text-base sm:text-lg lg:text-xl text-muted-foreground mb-6 sm:mb-8 lg:mb-12 leading-relaxed max-w-lg mx-auto lg:mx-0'
 										variants={fadeInLeft}
 										itemProp='description'
 									>
-										Professional roofing services with expert craftsmanship and
-										reliable results. Licensed, insured, and trusted by
-										homeowners for over 10 years.
+										24/7 emergency roof leak repair Sydney services.
+										Professional leaking roof specialists covering Eastern
+										Suburbs, Western Sydney, North Sydney & Inner West. Licensed
+										roof leak detection experts with fast response times.
 									</m.p>
 									<m.div
 										className='flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start'
@@ -590,10 +595,12 @@ export default function HomePage() {
 								transition={{ duration: 0.6 }}
 							>
 								<h2 className='font-heading text-3xl sm:text-4xl lg:text-5xl font-black text-foreground mb-4 sm:mb-6'>
-									Our Services
+									Roof Leak Repair Services Sydney
 								</h2>
 								<p className='text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto'>
-									Comprehensive roofing solutions for your property
+									Emergency roof leak repair across all Sydney suburbs - Eastern
+									Suburbs, Western Sydney, North Sydney, Inner West & Northern
+									Beaches
 								</p>
 							</m.div>
 
@@ -607,23 +614,23 @@ export default function HomePage() {
 								{[
 									{
 										icon: Shield,
-										title: 'Roof Inspection',
-										desc: 'Thorough inspections to assess the condition of your roof and identify potential issues.',
+										title: 'Emergency Roof Leak Repair Sydney',
+										desc: '24/7 emergency roof leak repair Sydney services. Fast response to leaking roof emergencies across all Sydney suburbs.',
 									},
 									{
 										icon: Wrench,
-										title: 'Leak Fixing',
-										desc: 'Prompt and reliable leak detection and repair to protect your property from water damage.',
+										title: 'Roof Leak Detection Sydney',
+										desc: 'Professional roof leak detection Sydney specialists using advanced technology to locate and fix leaking roofs quickly.',
 									},
 									{
 										icon: CheckCircle,
-										title: 'Gutter Replacement',
-										desc: 'Installation of new, high-quality gutters to ensure proper drainage and prevent water damage.',
+										title: 'Ceiling Leak Repair Sydney',
+										desc: 'Expert ceiling leak repair Sydney services. We fix water damage from leaking roofs and restore your ceiling.',
 									},
 									{
 										icon: CheckCircle,
-										title: 'Downpipe Replacement',
-										desc: 'Replacing old or damaged downpipes to maintain the integrity of your roofing system.',
+										title: 'Gutter Leak Repair Sydney',
+										desc: 'Professional gutter leak repair Sydney specialists. Fixing leaking gutters and downpipes across Sydney.',
 									},
 									{
 										icon: Award,
@@ -1073,6 +1080,370 @@ export default function HomePage() {
 						</div>
 					</section>
 
+					{/* SEO Content Section */}
+					<section className='py-16 sm:py-24 lg:py-32 bg-card/30'>
+						<div className='max-w-6xl mx-auto px-4 sm:px-6'>
+							<div className='text-center mb-12 sm:mb-16'>
+								<h2 className='font-heading text-3xl sm:text-4xl lg:text-5xl font-black text-foreground mb-6'>
+									Best Roof Leak Repair Company Sydney
+								</h2>
+								<p className='text-lg sm:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed'>
+									Licensed roof leak repair contractors Sydney with 20+ years
+									experience. Affordable roof leak repair Sydney services across
+									Eastern Suburbs, Western Sydney, North Sydney, Inner West &
+									Northern Beaches.
+								</p>
+							</div>
+
+							<div className='grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start'>
+								<m.div
+									initial={{ opacity: 0, x: -50 }}
+									whileInView={{ opacity: 1, x: 0 }}
+									viewport={{ once: true }}
+									transition={{ duration: 0.6 }}
+								>
+									<h3 className='font-heading text-2xl sm:text-3xl font-bold text-foreground mb-6'>
+										24 Hour Roof Leak Repair Sydney Areas
+									</h3>
+									<div className='space-y-4'>
+										<div className='bg-white p-4 rounded-lg border border-border/20'>
+											<h4 className='font-semibold text-lg mb-2 text-primary'>
+												Eastern Suburbs Sydney
+											</h4>
+											<p className='text-muted-foreground'>
+												Professional roof leak repair Eastern Suburbs Sydney
+												including Bondi, Coogee, Double Bay, Paddington &
+												surrounding areas.
+											</p>
+										</div>
+										<div className='bg-white p-4 rounded-lg border border-border/20'>
+											<h4 className='font-semibold text-lg mb-2 text-primary'>
+												Western Sydney
+											</h4>
+											<p className='text-muted-foreground'>
+												Expert leaking roof repair Western Sydney covering
+												Parramatta, Blacktown, Liverpool & all western suburbs.
+											</p>
+										</div>
+										<div className='bg-white p-4 rounded-lg border border-border/20'>
+											<h4 className='font-semibold text-lg mb-2 text-primary'>
+												North Sydney
+											</h4>
+											<p className='text-muted-foreground'>
+												Emergency roof leak repair North Sydney specialists
+												serving Chatswood, Lane Cove, Mosman & northern areas.
+											</p>
+										</div>
+									</div>
+								</m.div>
+
+								<m.div
+									initial={{ opacity: 0, x: 50 }}
+									whileInView={{ opacity: 1, x: 0 }}
+									viewport={{ once: true }}
+									transition={{ duration: 0.6, delay: 0.2 }}
+								>
+									<h3 className='font-heading text-2xl sm:text-3xl font-bold text-foreground mb-6'>
+										Why Choose Our Roof Leak Specialists Sydney?
+									</h3>
+									<div className='space-y-4'>
+										<div className='flex items-start space-x-3'>
+											<CheckCircle className='w-6 h-6 text-primary mt-1 flex-shrink-0' />
+											<div>
+												<h4 className='font-semibold text-lg mb-1'>
+													24/7 Emergency Response
+												</h4>
+												<p className='text-muted-foreground'>
+													Round-the-clock emergency roof leak repair Sydney
+													services with rapid response times.
+												</p>
+											</div>
+										</div>
+										<div className='flex items-start space-x-3'>
+											<CheckCircle className='w-6 h-6 text-primary mt-1 flex-shrink-0' />
+											<div>
+												<h4 className='font-semibold text-lg mb-1'>
+													Advanced Leak Detection
+												</h4>
+												<p className='text-muted-foreground'>
+													Professional roof leak detection Sydney using thermal
+													imaging and moisture meters.
+												</p>
+											</div>
+										</div>
+										<div className='flex items-start space-x-3'>
+											<CheckCircle className='w-6 h-6 text-primary mt-1 flex-shrink-0' />
+											<div>
+												<h4 className='font-semibold text-lg mb-1'>
+													Licensed & Insured
+												</h4>
+												<p className='text-muted-foreground'>
+													Fully licensed roof leak repair contractors Sydney
+													with comprehensive insurance coverage.
+												</p>
+											</div>
+										</div>
+										<div className='flex items-start space-x-3'>
+											<CheckCircle className='w-6 h-6 text-primary mt-1 flex-shrink-0' />
+											<div>
+												<h4 className='font-semibold text-lg mb-1'>
+													Affordable Rates
+												</h4>
+												<p className='text-muted-foreground'>
+													Competitive pricing for all roof leak repair Sydney
+													services with transparent quotes.
+												</p>
+											</div>
+										</div>
+									</div>
+								</m.div>
+							</div>
+						</div>
+					</section>
+
+					{/* Contact Me Section */}
+					<section
+						id='contact-me'
+						className='py-16 sm:py-24 lg:py-32 bg-gradient-to-br from-primary/5 via-background to-primary/10'
+					>
+						<div className='max-w-3xl mx-auto px-4 sm:px-6'>
+							<m.div
+								className='text-center mb-10 sm:mb-14'
+								initial={{ opacity: 0, y: 40 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								viewport={{ once: true }}
+								transition={{ duration: 0.6 }}
+							>
+								<h2 className='font-heading text-3xl sm:text-4xl lg:text-5xl font-black text-foreground mb-4 sm:mb-6'>
+									Contact Me
+								</h2>
+								<p className='text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto'>
+									Send a message and we will get back to you shortly.
+								</p>
+							</m.div>
+							{(() => {
+								interface ContactFormValues {
+									fullName: string
+									phone: string
+									email: string
+									subject: string
+									message: string
+								}
+
+								const {
+									register,
+									handleSubmit,
+									formState: { errors, isSubmitting },
+									reset,
+								} = useForm<ContactFormValues>({
+									mode: 'onBlur',
+									defaultValues: {
+										fullName: '',
+										phone: '',
+										email: '',
+										subject: '',
+										message: '',
+									},
+								})
+
+								async function onSubmit(data: ContactFormValues) {
+									try {
+										const res = await fetch('/api/contact', {
+											method: 'POST',
+											headers: { 'Content-Type': 'application/json' },
+											body: JSON.stringify(data),
+										})
+										if (!res.ok) {
+											let msg = 'Failed to send message.'
+											try {
+												const j = await res.json()
+												msg = j.error || msg
+											} catch {}
+											toast({ title: 'Error', description: msg })
+											return
+										}
+										toast({
+											title: 'Message sent successfully!',
+											description:
+												'Check your email for confirmation. We will get back to you shortly.',
+										})
+										reset()
+									} catch (e) {
+										toast({
+											title: 'Network error',
+											description: 'Please try again later.',
+										})
+									}
+								}
+
+								return (
+									<form
+										className='space-y-6'
+										onSubmit={handleSubmit(onSubmit)}
+										noValidate
+									>
+										<div className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
+											<div className='flex flex-col gap-2'>
+												<label
+													htmlFor='fullName'
+													className='text-sm font-medium text-foreground'
+												>
+													Full Name
+												</label>
+												<input
+													id='fullName'
+													placeholder='John Smith'
+													{...register('fullName', {
+														required: 'Full name is required',
+														minLength: { value: 2, message: 'Too short' },
+													})}
+													className={`w-full rounded-md border border-border/50 bg-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition ${
+														errors.fullName
+															? 'border-red-500 focus:ring-red-300'
+															: ''
+													}`}
+												/>
+												{errors.fullName && (
+													<p className='text-xs text-red-600'>
+														{errors.fullName.message}
+													</p>
+												)}
+											</div>
+											<div className='flex flex-col gap-2'>
+												<label
+													htmlFor='phone'
+													className='text-sm font-medium text-foreground'
+												>
+													Phone
+												</label>
+												<input
+													id='phone'
+													placeholder='0449 974 797'
+													{...register('phone', {
+														required: 'Phone is required',
+														pattern: {
+															value: /^[0-9+()\s-]{6,}$/,
+															message: 'Invalid phone number',
+														},
+													})}
+													className={`w-full rounded-md border border-border/50 bg-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition ${
+														errors.phone
+															? 'border-red-500 focus:ring-red-300'
+															: ''
+													}`}
+												/>
+												{errors.phone && (
+													<p className='text-xs text-red-600'>
+														{errors.phone.message}
+													</p>
+												)}
+											</div>
+										</div>
+										<div className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
+											<div className='flex flex-col gap-2'>
+												<label
+													htmlFor='email'
+													className='text-sm font-medium text-foreground'
+												>
+													Email
+												</label>
+												<input
+													id='email'
+													placeholder='you@example.com'
+													{...register('email', {
+														required: 'Email is required',
+														pattern: {
+															value: /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/,
+															message: 'Invalid email address',
+														},
+													})}
+													className={`w-full rounded-md border border-border/50 bg-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition ${
+														errors.email
+															? 'border-red-500 focus:ring-red-300'
+															: ''
+													}`}
+												/>
+												{errors.email && (
+													<p className='text-xs text-red-600'>
+														{errors.email.message}
+													</p>
+												)}
+											</div>
+											<div className='flex flex-col gap-2'>
+												<label
+													htmlFor='subject'
+													className='text-sm font-medium text-foreground'
+												>
+													Subject
+												</label>
+												<input
+													id='subject'
+													placeholder='Roof inspection request'
+													{...register('subject', {
+														required: 'Subject is required',
+														minLength: { value: 3, message: 'Too short' },
+													})}
+													className={`w-full rounded-md border border-border/50 bg-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition ${
+														errors.subject
+															? 'border-red-500 focus:ring-red-300'
+															: ''
+													}`}
+												/>
+												{errors.subject && (
+													<p className='text-xs text-red-600'>
+														{errors.subject.message}
+													</p>
+												)}
+											</div>
+										</div>
+										<div className='flex flex-col gap-2'>
+											<label
+												htmlFor='message'
+												className='text-sm font-medium text-foreground'
+											>
+												Message
+											</label>
+											<textarea
+												id='message'
+												rows={5}
+												placeholder='Describe your roofing needs...'
+												{...register('message', {
+													required: 'Message is required',
+													minLength: {
+														value: 10,
+														message: 'Please provide more details',
+													},
+												})}
+												className={`w-full rounded-md border border-border/50 bg-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition resize-y ${
+													errors.message
+														? 'border-red-500 focus:ring-red-300'
+														: ''
+												}`}
+											/>
+											{errors.message && (
+												<p className='text-xs text-red-600'>
+													{errors.message.message}
+												</p>
+											)}
+										</div>
+										<m.div
+											whileHover={{ scale: 1.03 }}
+											whileTap={{ scale: 0.97 }}
+										>
+											<Button
+												type='submit'
+												disabled={isSubmitting}
+												className='w-full sm:w-auto px-8 py-6 text-base font-semibold'
+											>
+												{isSubmitting ? 'Sending...' : 'Send Message'}
+											</Button>
+										</m.div>
+									</form>
+								)
+							})()}
+						</div>
+					</section>
+
 					{/* Credentials Section */}
 					<section
 						id='credentials'
@@ -1172,29 +1543,63 @@ export default function HomePage() {
 					transition={{ duration: 0.6 }}
 				>
 					<div className='max-w-6xl mx-auto px-4 sm:px-6'>
-						<div className='text-center'>
+						<div className='text-center mb-8'>
 							<m.div
 								whileHover={{ scale: 1.05 }}
 								transition={{ type: 'spring', stiffness: 300 }}
 							>
 								<Image
 									src='/logo.png'
-									alt='Au Roofing Logo'
+									alt='AU Roofing - Roof Leak Repair Sydney Specialists'
 									width={200}
 									height={80}
 									className='h-10 sm:h-12 lg:h-16 w-auto mb-3 sm:mb-4 lg:mb-6 brightness-0 invert mx-auto'
 								/>
 							</m.div>
-							<p className='text-background/80 text-sm sm:text-base lg:text-lg mb-4 sm:mb-6 lg:mb-8 max-w-2xl mx-auto px-4'>
-								Professional roofing services with quality craftsmanship and
-								reliable results.
+							<p className='text-background/80 text-sm sm:text-base lg:text-lg mb-4 sm:mb-6 max-w-3xl mx-auto px-4'>
+								Emergency roof leak repair Sydney specialists. 24/7 leaking roof
+								repair services across Eastern Suburbs, Western Sydney, North
+								Sydney, Inner West & Northern Beaches.
 							</p>
-							<div className='border-t border-background/20 pt-4 sm:pt-6 lg:pt-8'>
-								<p className='text-background/60 text-xs sm:text-sm lg:text-base px-4'>
-									&copy; 2025 Au Roofing. All rights reserved. Licensed &
-									Insured.
-								</p>
+						</div>
+
+						<div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 text-sm'>
+							<div className='text-center md:text-left'>
+								<h4 className='font-bold text-background mb-3'>
+									Sydney Areas We Serve
+								</h4>
+								<div className='text-background/70 space-y-1'>
+									<p>• Roof leak repair Eastern Suburbs Sydney</p>
+									<p>• Leaking roof repair Western Sydney</p>
+									<p>• Emergency roof leak repair North Sydney</p>
+									<p>• Roof repairs Inner West Sydney</p>
+								</div>
 							</div>
+							<div className='text-center'>
+								<h4 className='font-bold text-background mb-3'>Our Services</h4>
+								<div className='text-background/70 space-y-1'>
+									<p>• Emergency roof leak repair Sydney</p>
+									<p>• Roof leak detection Sydney</p>
+									<p>• Ceiling leak repair Sydney</p>
+									<p>• 24/7 emergency roof repairs Sydney</p>
+								</div>
+							</div>
+							<div className='text-center md:text-right'>
+								<h4 className='font-bold text-background mb-3'>Contact Info</h4>
+								<div className='text-background/70 space-y-1'>
+									<p>📞 0449 974 797</p>
+									<p>📧 info@auroofing.com.au</p>
+									<p>🕒 24/7 Emergency Service</p>
+									<p>📍 All Sydney Suburbs</p>
+								</div>
+							</div>
+						</div>
+
+						<div className='border-t border-background/20 pt-4 sm:pt-6 lg:pt-8'>
+							<p className='text-background/60 text-xs sm:text-sm lg:text-base px-4 text-center'>
+								&copy; 2025 AU Roofing - Best Roof Leak Repair Company Sydney.
+								Licensed roof leak repair contractors. All rights reserved.
+							</p>
 						</div>
 					</div>
 				</m.footer>
