@@ -1588,7 +1588,7 @@ export default function HomePage() {
 								<h4 className='font-bold text-background mb-3'>Contact Info</h4>
 								<div className='text-background/70 space-y-1'>
 									<p>📞 0449 974 797</p>
-									<p>📧 info@auroofing.com.au</p>
+									<p>📧 auroofing1@gmail.com</p>
 									<p>🕒 24/7 Emergency Service</p>
 									<p>📍 All Sydney Suburbs</p>
 								</div>
